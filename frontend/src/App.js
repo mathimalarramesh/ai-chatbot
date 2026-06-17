@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
  
-const BACKEND = "http://localhost:5000";
+const BACKEND = "";
 const SESSION_KEY = "chatbot_session_id";
  
 const SUGGESTIONS = [
@@ -78,7 +78,7 @@ export default function App() {
         setError("Got a response but no reply. Check if your Gemini API key is correct.");
       }
     } catch (err) {
-      setError("Cannot connect to backend. Make sure Python app.py is running in a terminal.");
+      // Backend not available
     } finally {
       setIsTyping(false);
     }
